@@ -516,86 +516,97 @@
     }
   });
 </script>
- <!-- 🎁 Nancy's Gift Registry -->
+<!-- 🎁 Nancy's Gift Registry -->
 <section class="gift-registry">
   <h2>🎀 Nancy’s Gift Registry</h2>
-  
-<h3 style="color:#ff1493; margin-bottom:10px;">
-  💝 Can’t make it? You can still send a gift!
-</h3>
+
+  <h3 style="color:#ff1493;">💝 Can’t make it? You can still send a gift!</h3>
+
   <p class="note">
-  Your presence is the greatest gift! 🎉<br><br>
-  If you’d like to spoil Nancy, you’re welcome to reserve a gift below 💖<br>
-  Whether you can attend or not, your love and thoughtfulness mean so much to us 🥰
-</p>
+    Your presence is the greatest gift! 🎉<br><br>
+    If you'd like to spoil Nancy, please reserve a gift below 💖<br>
+    Whether you attend or not, it means so much 🥰
+  </p>
 
   <div class="gift-container">
 
-    <!-- Gift Item -->
-    <div class="gift-card">
-      <h3>🏠 Dollhouse</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
+    <div class="gift-card"><h3>🏠 Dollhouse</h3><button onclick="openForm('Dollhouse')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🧸 Dolls</h3><button onclick="openForm('Dolls')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🧩 Puzzles</h3><button onclick="openForm('Puzzles')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>📚 Reading Books</h3><button onclick="openForm('Reading Books')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🎨 Coloring Books</h3><button onclick="openForm('Coloring Books')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>💄 Makeup Playset</h3><button onclick="openForm('Makeup Playset')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>👗 Dress-Up Costumes</h3><button onclick="openForm('Dress-Up Costumes')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🍳 Toy Kitchen Set</h3><button onclick="openForm('Toy Kitchen Set')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🦄 Soft Toys</h3><button onclick="openForm('Soft Toys')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🚲 Scooter / Bike</h3><button onclick="openForm('Scooter / Bike')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🎲 Educational Toys</h3><button onclick="openForm('Educational Toys')">Reserve Gift 🎁</button></div>
+    <div class="gift-card"><h3>🛏️ Cute Pajamas</h3><button onclick="openForm('Cute Pajamas')">Reserve Gift 🎁</button></div>
 
-    <div class="gift-card">
-      <h3>🧸 Dolls</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🧩 Puzzles</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>📚 Reading Books</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🎨 Coloring Books</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>💄 Makeup Playset</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <!-- EXTRA IDEAS -->
-    <div class="gift-card">
-      <h3>👗 Dress-Up Costumes</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🍳 Toy Kitchen Set</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🦄 Soft Toys (Unicorns/Teddies)</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🚲 Scooter or Balance Bike</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🎲 Educational Toys</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-
-    <div class="gift-card">
-      <h3>🛏️ Cute Pajamas</h3>
-      <button onclick="reserveGift(this)">Reserve Gift 🎁</button>
-    </div>
-<p style="font-size:14px; color:#777;">
-  📦 Gifts can be brought to the party or sent beforehand.
-</p>
   </div>
+
+  <p style="font-size:14px; color:#777;">
+    📦 Gifts can be brought to the party or sent beforehand.
+  </p>
 </section>
+
+<!-- 🎨 STYLING -->
+<style>
+.gift-registry {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to right, #ffe0f0, #fff5fa);
+}
+
+.gift-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gift-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gift-card:hover {
+  transform: scale(1.05);
+}
+
+.gift-card h3 {
+  color: #ff69b4;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #ff1493;
+}
+</style>
+
+<!-- ⚡ CONNECT TO GOOGLE FORM -->
+<script>
+function openForm(gift) {
+  const baseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeWFkCPdcemglsQ1mzlETJ76kiTVtJujzrO3U6Ts4726lN_Pw/viewform";
+
+  // 👉 IMPORTANT: replace entry ID below after testing prefill (optional)
+  const formURL = baseURL + "?usp=pp_url&entry.123456789=" + encodeURIComponent(gift);
+
+  window.open(formURL, "_blank");
+}
+</script>
 </body>
 </html>
